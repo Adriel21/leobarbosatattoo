@@ -1,0 +1,19 @@
+{
+    "description": "leobarbosatattoo",
+    "authors": [
+        {
+            "name": "Adriel Lira",
+            "email": "adrieldiasdossantoslira@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app",
+            "Admin\\": "app/admin/"      
+        }
+    },
+    "require": {
+        "twig/twig": "^3.7",
+        "phpmailer/phpmailer": "^6.8"
+    }
+}

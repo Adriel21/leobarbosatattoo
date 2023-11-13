@@ -1,0 +1,1341 @@
+@import url(general.css);
+
+/* Animações */
+
+.animate-lettersTitle {
+  overflow: hidden;
+}
+
+.animate-lettersTitle {
+  opacity: 0;
+  animation: animateText 1s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes animateText {
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-lettersText {
+  overflow: hidden;
+}
+
+.animate-lettersText {
+  opacity: 0;
+  animation: animateText 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes animateText {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.animate-lettersButton {
+  overflow: hidden;
+}
+
+.animate-lettersButton {
+  opacity: 0;
+  animation: animateText 1s forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes animateText {
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-boxOne {
+  overflow: hidden;
+}
+
+.animate-boxOne {
+  opacity: 0;
+  animation: animateText 1s forwards;
+  animation-delay: 1.0s;
+}
+
+@keyframes animateText {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fim animações */
+
+/* CSS do Cabeçalho Home Mobile*/
+
+header{
+    padding-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Exemplo de uso da fonte na sua página */
+  /* header h1 {
+    font-family: 'Gopher', sans-serif;
+    font-size: clamp(18px, 3vw, 24px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: white;
+  } */
+
+   .menu_nav{
+    width: 16%;
+  } 
+
+  
+
+  .menu_hamburguer span {
+    height: 3px;
+    width: 35px;
+    background-color: white;
+    display: block;
+    margin-bottom: 4px;
+    border-radius: 50px;
+    padding: 2px;
+  }
+
+  .menu_hamburguer span:nth-child(2) {
+    width: 20px;
+    transform: scaleX(-1);
+    transform-origin: center; /* Define o ponto de origem para o centro do elemento */
+  }
+
+ 
+
+  /* Cabeçalho Tablet */
+
+  @media screen and (min-width: 728px) {
+    .menu_nav{
+      width: 10%;
+    } 
+  }
+
+  /* CSS Header e Menu Desktop */
+
+@media screen and (min-width:960px){
+
+  header{
+   padding-top: 30px;
+  }
+
+  /* header h1{
+    margin-top: 15px;
+  } */
+
+  .menu_nav{
+    width: 50%;
+  } 
+
+  .menu_hamburguer{
+      display: none;
+  }
+
+
+
+  .ul_nav{
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .menu a {
+      background-color: transparent;
+      height: 50px;
+      padding: 15px;
+      font-family: var(--font-post-blog)!important;
+      color: white!important;
+      position: relative; /* Adicionado */
+    }
+  
+    .menu .commonLink::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #F0B648; /* Cor da linha */
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .menu a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .contactOptionMenu{
+      /* border-radius: 12px; */
+      background-color: #F0B648;
+      box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  .contactOptionMenu:hover{
+      background-color: white;
+  }
+
+  .contactLink{
+      color: white !important;
+  }
+
+  .contactLink:hover{
+      color: #F0B648 !important;
+  }
+
+  
+
+
+  }
+  
+  @media screen and (min-width: 1400px){
+       header{
+        padding-left: 50px;
+    }
+  }
+
+  /* Fim do CSS Header e Menu Desktop  */
+
+  
+
+  /* CSS da primeira chamada */
+
+  .first_background{
+    background-image: url(../img/first_background/rengoku_comprimida.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .portfolio_background {
+    background-image: url(../img/social/leo_em_sp_preto_e_branco.webp);
+    background-size: cover;
+    background-position: 50% 60%; /* Ajuste a posição para "center bottom" */
+    background-repeat: no-repeat;
+  }
+
+  .blog_background{
+    background-image: url(../img/first_background/artificial_tattoo_comprimida_sem_marca.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .banner_overlay{
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .banner_overlay:first-child{
+    height: 100%;
+  }
+
+  @media screen and (min-width: 720px){
+    .first_background, .portfolio_background, .blog_background, .post_background{
+      height: 450px!important;
+    }
+  }
+
+  @media screen and (min-width: 960px){
+    .first_background, .portfolio_background, .blog_background, .post_background{
+      height: 600px!important;
+    }
+
+   
+  }
+
+
+  .first_call{
+    margin-top: 5%;
+    padding-left: 20px;
+  }
+  
+  @media screen and (min-width: 1400px){
+    .first_call{
+      padding-left: 50px;
+    }
+  }
+
+  .first_call h1{
+    font-family: var(--font-main);
+    color: white;
+    font-size: var( --font-size-title);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 30px;
+    /* width: 90%; */
+    width: 100%;
+  }
+
+  .first_call p{
+    font-family: var(--font-main);
+    color: white;
+    font-size: clamp(16px, 3vw, 22px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 30px;
+    width: 80%;
+  }
+
+  @media screen and (min-width: 960px){
+    .first_call h1{
+      margin-bottom: 50px;
+    }
+
+    .first_call p{
+      margin-bottom: 50px;
+    }
+  }
+
+  .btn_one{
+    width: 193px;
+    height: 32px;
+    flex-shrink: 0;
+    /* border-radius: 21px; */
+    border: 1px solid #FFF;
+    background: #000000;
+    color: #fff;
+    font-family: var(--font-main);
+    margin-bottom: 50px;
+    font-size: clamp(16px, 2vw, 20px);
+
+  }
+
+  .btn_one:hover, .btn_about:hover{
+      border: none;
+      font-weight: bold;
+  }
+
+  .btn_one a{
+    padding: 8px;
+  }
+
+  /*Primeira Chamada no Table */
+
+  @media screen and (min-width: 728px){
+    .btn_one{
+      width: 250px;
+      height: 40px;
+    }
+  }
+ 
+
+  /* Fim do CSS da primeira chamada */
+
+
+  /* Início do CSS da MAIN home Mobile */
+
+  main{
+    margin-top: 40px;
+  }
+  
+
+   .about h2, .about p, .about ol, .about ul{
+    padding-left: 20px;
+  }
+
+  .about .box_one{
+    display: flex;
+    gap: 28px;
+  }
+
+  .box_one div{
+    display: flex;
+    gap: 17px;
+  }
+
+  .box_one div img{
+    width: 30px;
+  }
+
+  .btn_about{
+    margin-top: 20px;
+    font-family: var(--font-main);
+    font-weight: bold;
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    margin-left: 18px;
+    border: 2px solid black;
+  }
+
+  .btn_about a{
+    color: black;
+    text-decoration: none;
+    padding: 8px;
+  }
+ 
+  .article_one{
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 728px){
+    .about .box_one{
+      display: flex;
+      align-items: center;
+      gap: 22%;
+    }
+
+    .box_one div{
+      gap: 30px;
+    }
+
+    .box_one div img{
+      width: 40px;
+    }
+  }
+
+  .box_one h2{
+    color: #000;
+    font-family: var(--font-main);
+    font-size: var(--font-size-title);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+    .separator_orange{
+    margin-top: 12px;
+    width: 120px;
+    margin-left: 20px;
+    height: 4px;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 24px;
+    background: #F0B648;
+  }
+
+   .about .separator_white{
+    margin-top: 12px;
+    margin-bottom: 30px;
+    width: 120px;
+    margin-left: 20px;
+    height: 4px;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 24px;
+    background: #fff;
+  }
+
+  .about .perfil_box{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+  .about .leo_perfil{
+    width: 199px;
+    height: 199px;
+    flex-shrink: 0;    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra à imagem */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .about .article_one p{
+    color: #000;
+    font-family: var(--font-main);
+    font-size: clamp(16px, 3vw, 16px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .article_one{
+      display: flex;
+      /* align-items: center; */
+      justify-content: space-between;
+      margin-top: 30px;
+      gap: 10px;
+    }
+
+    .article_one p:first-child{
+      margin-top: 5%;
+    }
+
+    /* .article_one div{
+      width: 40%;
+    } */
+    
+
+    .about .leo_perfil{
+      /* border-radius: 35px; */
+      width: 320px;
+      height: 340px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .perfil_box{
+      padding-left: 20px;
+    }
+
+    .about .article_one p{
+      text-indent: 14px;
+      text-align: left;
+
+    }
+
+    
+  }
+
+  @media screen and (min-width: 1200px){
+
+    .btn_about{
+      width: 200px;
+    }
+
+    .btn_one a, .btn_about a{
+      padding: 15px;
+    }
+
+    
+    .article_one p:first-child{
+      margin-top: 7%;
+      margin-bottom: 25px;
+    }
+  
+    
+    .about .leo_perfil{
+      width: 350px;
+      height: 370px;
+    }
+
+    .about .article_one p{
+      font-size: clamp(16px, 3vw, 20px);
+    }
+  
+  }
+
+  .about .article_two{
+    margin-top: 30px;
+    background-image: url(../img/first_background/artificial_tattoo_comprimida_sem_marca.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+  }
+
+  .box_two{
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+  }
+
+  .article_two h2{
+    width: 100%;
+    color: white;
+    font-family: var(--font-main);
+    font-size: var(--font-size-title);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+   .article_two p{
+    width: 100%;
+    color: #fff;
+    font-family: var(--font-main);
+    font-size: clamp(16px, 3vw, 20px);
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 28px;
+  }
+
+  @media screen and (min-width: 1400px){
+    .about h2, .about p, .about .box_one, .about .box_two{
+    padding-left: 20px;
+  }
+
+   .separator_orange{
+    margin-left: 40px;
+  } 
+
+  .perfil_box{
+    margin-left: 20px;
+  }
+
+
+}
+
+  
+
+    /* Fim do CSS da MAIN home Mobile */
+
+    /* Início sessão Meu trabalho Mobile */
+
+    .my_work{
+      margin-bottom: 40px;
+    }
+
+    .my_work h2{
+        margin-top: 30px;
+        padding-left: 20px;
+        color: #000;
+        font-family: var(--font-main);
+        font-size: var(--font-size-title);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+        /* Biblioteca Swiper */
+            .swiper {
+                width: 300px;
+                height: 300px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+
+            }
+
+            :root {
+                --swiper-theme-color: #F0B648;
+            }
+
+            .swiper-slide{
+                border-radius: 10px;
+            }
+
+          
+
+    
+    .box_button{
+        display: flex;
+        justify-content: center;
+    }
+
+        
+    .btn_two{
+        width: 250px;
+        height: 40px;
+        border-radius: 21px;
+        border: 1px solid #000;
+        background: #FFF;
+        color: #000;
+        font-family: var(--font-main);
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    
+    /* Swiper tablet*/
+
+    @media screen and (min-width: 728px) {
+     .my_work .swiper{
+        width: 95%;
+        height: 300px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+     }
+
+    }
+ 
+
+    
+
+    @media screen and (min-width: 1400px){
+      .my_work h2{
+        padding-left: 40px;
+      }
+
+      
+    }
+        
+    /* Fim da sessão Meu trabalho Mobile */
+
+    /* Início da sessão de blog */
+    
+    
+        .custom_separator {
+          background-image: url(../img/trainee/gato_em_pele_artificial_auto_x2_comprimida.jpg);
+          -webkit-background-size: cover; /* Safari */
+          background-size: cover;
+          -webkit-background-repeat: no-repeat; /* Safari */
+          background-repeat: no-repeat;
+          -webkit-background-attachment: fixed; /* Safari */
+          background-attachment: fixed;
+          -webkit-background-position: center; /* Safari */
+          background-position: center;
+          height: 250px;
+          position: relative;
+          margin-bottom: 30px;
+      }
+      
+    @media screen and (min-width: 960px){
+      .custom_separator{
+        height: 250;
+      }
+    }
+    
+    .custom_separator::after {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%; /* Adicione esta linha */
+       height: 100%; /* Adicione esta linha */
+       background-color: rgba(1, 1, 1, 0.7); /* Usando rgba para adicionar transparência */
+    }
+    
+    .blog h2{
+        padding-left: 20px;
+        color: #000;
+        font-family: var(--font-main);
+        font-size: var(--font-size-title);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .blog{
+      margin-bottom: 60px;
+    }
+
+    .card_post{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+ 
+
+    @media screen and (min-width: 728px) {
+
+      .card_post div{
+        width: 40%;
+      }
+      
+    }
+
+    @media screen and (min-width: 960px){
+
+      .card_post{
+        gap: 100px;
+      }
+
+      .card_post div{
+        width: 25%;
+      }
+    }
+    
+
+
+    .card_post img{
+      width: 313px;
+      height: 161px;
+      flex-shrink: 0;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      
+
+
+    }
+
+    .card_post .content{
+      width: 313px;
+      height: 230px;
+      flex-shrink: 0;
+      background: #FFF;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      padding-left: 20px;
+      
+    }
+      
+
+    .card_post .date{
+      color: #000;
+      font-family: var(--font-main);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 10px;
+    }
+
+    .card_post .text{
+      width: 90%;
+      margin-top: 10px;
+      color: #000;
+      font-family: var(--font-main);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .card_post h3{
+      margin-top: 10px;
+      color: #000;
+      font-family: var(--font-main);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+     
+    .btn_three{
+      margin-top: 30px;
+      width: 250px;
+      height: 40px;
+      border-radius: 21px;
+      border: 1px solid #000;
+      background: #FFF;
+      color: #000;
+      font-family: var(--font-main);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1300px){
+      
+      .card_post{
+        gap: 100px;
+      }
+
+      .card_post div{
+        width: 26%;
+      }
+
+
+    .card_post img{
+      width: 370px;
+      height: 220px;
+      flex-shrink: 0;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      
+
+
+    }
+
+    .card_post .content{
+      width: 370px;
+      height: 230px;
+      flex-shrink: 0;
+      background: #FFF;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      padding-left: 20px;
+      
+    }
+
+   
+
+  }
+
+  @media screen and (min-width: 1400px){
+    .blog h2{
+      padding-left: 40px;
+    }
+  }
+
+    
+    /* Fim da sessão de blog */
+
+
+  
+  /* CSS Footer */
+
+  footer{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    background-color: #191a1b;
+
+  }
+
+
+
+  footer h3{
+    color: white;
+    text-align: center;
+    text-decoration: #F0B648 underline;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: var(--font-main);
+    font-weight: bold;
+  }
+
+
+  footer p{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-family: var(--font-main);
+    margin-bottom: 15px;
+  }
+
+  footer nav ul li{
+    color: white;
+    text-align: center;
+    font-size: var(--font-main);
+    font-family: var(--font-main);
+    margin-bottom: 15px;
+  }
+
+  footer article{
+    margin-bottom: 30px;
+  }
+
+  .newsletter form{
+    text-align: center;
+  }
+
+  .newsletter input{
+    padding: 8px;
+    width: 60%;
+    border-radius: 6px;
+  }
+
+  .newsletter span{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 960px){
+    footer nav{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .newsletter input{
+      width: 100%;
+    }
+  }
+
+  .newsletter div{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .newsletter span{
+    margin-top: 20px;
+    display: flex;
+  }
+
+  .newsletter span input{
+    width: 20%;
+    height: 15px;
+  }
+
+  .newsletter div button{
+    width: 220px;
+    height: 35px;
+    border-radius: 21px;
+    border: 1px solid #000;
+    background: #FFF;
+    color: #000;
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+
+  /* CSS da Página de PORTFÓLIO - Mobile */
+
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+    left: 40vw; 
+    animation: slideUpDown 2s infinite alternate;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 728px){
+  .arrow{
+    left: 45vw; 
+  }
+}
+
+
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.portfolio_background{
+  height: 350px;
+}
+
+
+.portfolio figure{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.portfolio img{
+  border-radius: 6px;
+}
+
+.portfolio{
+  margin-bottom: 25px;
+}
+
+
+
+
+@media screen and (min-width: 1200px){
+  .portfolio figure{
+    gap: 30px;
+  }
+
+  .portfolio img{
+    width: 300px;
+    height: 300px;
+  }
+}
+/* Fim do CSS Portfólio */
+
+/* Início do CSS da página de BLOG */
+ 
+.blog_background{
+  height: 350px;
+}
+
+.subject{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  list-style: circle;
+  margin-top: 20px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 2px;
+}
+
+.subject li{
+  color: white;
+}
+
+.subject a{
+  color: white;
+  font-family: var(--font-main);
+  font-size: var( --font-size-listBlog);
+  position: relative; 
+}
+
+.searchBlog{
+  margin-top: 20px;
+}
+
+  
+.searchBlog div{
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+ .searchBlog input{
+  padding-left: 20px; 
+  height: 30px;
+  width: 250px;
+  background-color: transparent;
+  border: white 2px solid;
+  color: white;
+} 
+
+.searchBlog button{
+  height: 30px;
+  width: 60px;
+}
+
+/* Estilo para o menu de paginação */
+.nav_pagination {
+  text-align: center; /* Alinhar à direita */
+  margin-bottom: 70px;
+}
+
+.nav_pagination ul {
+  display: inline-block; /* Para que os elementos da lista fiquem lado a lado */
+  list-style: none; /* Remover marcadores de lista */
+  padding: 0; /* Remover preenchimento */
+}
+
+.nav_pagination ul li {
+  display: inline; /* Elementos de lista ficam lado a lado */
+  margin-right: 10px; /* Espaçamento entre os elementos */
+}
+
+.page-link {
+  text-decoration: none; /* Remover sublinhado dos links */
+  padding: 5px 10px; /* Espaçamento interno dos links */
+  background-color: #F0B648; /* Cor de fundo dos links */
+  color: #fff; /* Cor do texto dos links */
+  border-radius: 5px; /* Bordas arredondadas dos links */
+}
+
+.page-item.disabled .page-link {
+  background-color: #a09f9f; /* Cor de fundo para links desativados */
+  cursor: not-allowed; /* Cursor de não permitido para links desativados */
+}
+
+
+.page-item-none{
+  display: none;
+}
+
+@media screen and (min-width: 720px){
+  .blog_background, .portfolio_background{
+    height: 450px;
+  }
+
+  .nav_pagination {
+    text-align: right; /* Alinhar à direita */
+    margin-right: 50px;
+    margin-bottom: 70px;
+  }
+
+  .searchBlog input{
+    width: 300px;
+  } 
+  
+  
+}
+
+
+@media screen and (min-width: 1200px){
+
+ 
+  .subject a:hover::after{
+    transform: scaleX(1.2);
+  }
+  
+  .subject .commonLink::after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #F0B648; /* Cor da linha */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+
+  .searchBlog button:hover{
+    cursor: pointer;
+  }
+
+  .subject{
+    gap: 100px;
+    margin-top: 70px;
+  }
+
+  .searchBlog{
+    margin-top: 70px;
+  }
+
+  .searchBlog input{
+    height: 40px;
+    width: 350px;
+  } 
+  
+  .searchBlog button{
+    height: 40px;
+    width: 60px;
+  }
+  
+  
+}
+
+/* Fim do BLOG geral */
+
+/* Início do CSS do Post */
+
+.post_background{
+  height: 350px;
+}
+
+
+.postAuthor img{
+  border-radius: 50%;
+}
+
+.postAuthor div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.postAuthor div:first-child a{
+  color: white;
+  font-family: var(--font-main);
+  font-size: var(--font-size-listBlog);
+}
+
+  
+.midias{
+  display: flex;
+  gap: 20px;
+  margin-left: 10px;
+}
+
+.midias li{
+  color: white;
+  font-family: var(--font-main);
+  font-size: var(--font-size-listBlog);
+}
+
+.page_post_section{
+  margin-bottom: 50px;
+}
+
+.page_post_section img{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.post_content{
+  padding-left: 20px;
+}
+
+.summary_post{
+  font-family: var(--font-post-blog);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 100;
+  font-style: italic;
+  display: block;
+}
+
+.dynamic_content p, .dynamic_content li{
+  color: #000;
+  font-family: var(--font-post-blog);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 100;
+  line-height: 50px;
+}
+
+.dynamic_content p strong, .dynamic_content li strong{
+  font-weight: bold;
+  display: inline;
+}
+
+.dynamic_content h1, .dynamic_content h2, .dynamic_content h3, .dynamic_content h4, .dynamic_content strong, .dynamic_content a, .dynamic_content p, .dynamic_content li{
+  width: 95%;
+
+  overflow-wrap: break-word;  
+
+  word-wrap: break-word; 
+
+  word-break: break-word;
+}
+
+.dynamic_content h1{
+    color: #000;
+    font-family: var(--font-post-blog);
+    font-size: var( --font-size-titleBlogH1)!important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* margin-left: 20px; */
+}
+
+.dynamic_content h2{
+  color: #000;
+  font-family: var(--font-post-blog);
+  font-size: var( --font-size-titleBlogH2)!important;
+  font-weight: 400;
+  line-height: normal;
+  /* margin-left: 20px; */
+}
+
+.dynamic_content h3{
+  color: #000;
+  font-family: var(--font-post-blog);
+  font-size: var( --font-size-titleBlogH3)!important;
+  font-weight: 400;
+  line-height: normal;
+  /* margin-left: 20px; */
+}
+
+.dynamic_content p{
+  color: #000;
+  font-size: clamp(16px, 4vw, 20px);
+  font-family: var(--font-post-blog);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.dynamic_content ol{
+  list-style-type: decimal;
+}
+
+.dynamic_content ul{
+  margin-left: 20px;
+}
+
+
+
+@media screen and (min-width: 720px){
+  .post_background{
+    height: 450px;
+  }
+
+  .dynamic_content p, .dynamic_content ol{
+       margin-left: 20px;
+  }
+}
+
+
+
+
+@media screen and (min-width: 1200px){
+
+  .dynamic_content h1, .dynamic_content h2, .dynamic_content h3, .dynamic_content h4, .dynamic_content ul{
+    margin-left: 20px;
+  }
+  
+
+  .postAuthor{
+    display: flex;
+    gap: 10px;
+  }
+  
+  
+  .postAuthor div{
+    margin-top: 50px;
+  }
+
+  .post_content{
+    padding-left: 0;
+  }
+
+ 
+  
+  
+}
+
+

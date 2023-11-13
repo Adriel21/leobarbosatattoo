@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700;800&DM+Sans:wght@400;500;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:wght@300;400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Gopher'; /* Escolha um nome para sua fonte */
+    src: url('public/font/Gopher-Black.otf') format('opentype');
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+
+  :root {
+    --font-main: "Montserrat", sans-serif;
+    --fonte-banner: "DM Sans", sans-serif;
+    --font-post-blog: "Catamaran", sans-serif;
+    --font-size-titleBlogH3: clamp(18px, 5vw, 35px);
+    --font-size-titleBlogH2: clamp(20px, 5vw, 40px);
+    --font-size-titleBlogH1: clamp(25px, 5vw, 45px);
+    --font-size-title: clamp(20px, 5vw, 42px);
+    --font-size-titleMain: clamp(30px, 5vw, 60px);
+    --font-size-titleContentContainer: clamp(24px, 5vw, 48px);
+    --font-size-text: clamp(20px, 3vw, 30px);
+    --font-size-listBlog: clamp(12px, 3vw, 20px);
+    --font-size-button: clamp(16px, 3vw, 22px);
+
+
+  }
+
+
+  .logo{
+    width: 120px;
+  }
+
+@media screen and (min-width: 728px){
+  .logo{
+    width: 130px;
+  }
+}
+
+  
+
+
+  
+  .word{
+
+    width: 95%;
+
+    overflow-wrap: break-word;  
+
+    word-wrap: break-word; 
+
+    word-break: break-word;
+
+}
+
+.wordTitle{
+  width: 90%;
+
+  overflow-wrap: break-word;  
+
+  word-wrap: break-word; 
+
+  word-break: break-word;
+}
+
+.limitatorTitle{
+  width: 95%;
+}
+
+.limitator, .limitatorPost{
+  width: 100%;
+}
+
+.limitatorTwo{
+  width: 92%;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 728px){
+ 
+
+  .limitator{
+    width: 95%;
+  }
+
+  .limitatorPost{
+    width: 90%;
+  }
+
+  .limitatorTwo{
+    width: 94%;
+  }
+}
+
+@media screen and (min-width: 960px){
+  .limitatorTwo{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 960px){
+  .limitator{
+    width: 80%;
+  }
+
+  .limitatorPost{
+    width: 75%;
+  }
+
+  .word {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .logo{
+    width: 150px;
+  }
+
+  .limitatorTwo{
+    width: 73%;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 1200px){
+  :root{
+    --font-size-title: clamp(20px, 5vw, 48px);
+  }
+
+  .wordTitle{
+    width: 85%;
+  
+    overflow-wrap: break-word;  
+  
+    word-wrap: break-word; 
+  
+    word-break: break-word;
+  }
+  
+  .limitatorTitle{
+    width: 90%;
+  }
+}
+
+
+
+
+/* menu */
+
+
+.ul_nav{
+  font-size: 22px;
+  list-style: none;
+  font-family: var(--fonte-banner);
+  display: none; 
+
+}
+
+.ul_nav li a{
+  text-decoration: none;
+  color: #4d4c4c;
+  font-family: var(--fonte-banner);
+  font-weight: 600;
+}
+
+.ul_nav li:hover, .ul_nav li:focus{
+  transform: scale(1.05);
+
+}
+
+.menu a {
+  /* color: black; */
+  font-weight: bold;
+  /* background-color: white; */
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+/*Esta classe será MANIPULADA via JS*/
+.menu-aberto{
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 0;
+  z-index: 9998;
+  margin-top: 25px;
+}
+
+#span-menuOne {
+  animation: rotateAnimationOne 0.1s linear forwards;
+  transform: translateZ(0);
+
+}
+
+@keyframes rotateAnimationOne {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-40deg);
+  }
+}
+
+ #span-menuTwo {
+  display: none;
+ }
+
+
+#span-menuThree {
+  animation: rotateAnimationThree 0.1s linear forwards;
+  transform: translateZ(0);
+
+}
+
+@keyframes rotateAnimationThree {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(30deg);
+  }
+}
+
+
+
+/* Caixa fixa sobre aviso de cookies */
+.cookie-msg {
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 25px;
+  z-index: 9998;
+  -webkit-box-align: center;
+  align-items: center;
+  max-width: 1230px;
+  margin: 0px auto;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  box-shadow: rgb(124, 124, 124) 0px 0px 10px;
+  border-radius: 12px;
+  opacity: 0.9;
+  display: none;
+}
+
+.cookie-msg.mostrar{
+  display: flex;
+}
+
+.cookie-txt {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  padding: 5px; 
+  margin-right: 20px;
+}
+
+.cookie-btn button{
+  background: 0px 0px no-repeat padding-box padding-box rgb(255, 255, 255);
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #0650b1;
+  color: #0650b1;
+}
+
+.politica-privacidade {
+  color: #0650b1;
+}
+
+
+/* Ponto verde para o botão online */
+.online-dot {
+  animation: blinker 2s linear infinite;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border: 1px solid green;
+  background-color: green;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+@keyframes blinker {
+  50% {
+      opacity: 0.6;
+  }
+}
+
+
+/* Modal sobre política de privacidade */
+.modal-terms {
+  margin-top: 100px;
+  max-height: 500px;
+  z-index: 9999;
+}
+.btn-close-terms {
+  background: 0px 0px no-repeat padding-box padding-box rgb(255, 255, 255);
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #0650b1;
+  color: #0650b1;
+}
+
+
+

@@ -1,0 +1,100 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Correção para o elemento <article> no IE 8/9 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Correção para elementos block level que faltam semântica no IE 8/9 */
+div[role="main"], article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Correção para o elemento <audio> no IE 8/9 */
+audio:not([controls]) {
+  display: none;
+}
+
+/* Correção para o elemento <video> no IE 8/9 */
+video:not([controls]) {
+  display: none;
+}
+
+
+
+/* Correção para o elemento <audio> no IE 8/9 */
+audio:not([controls]) {
+  display: none;
+}
+
+/* Esconder elementos invisíveis no IE 8/9 */
+[hidden] {
+  display: none;
+}
+
+/* Estilos de imagens resistentes */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Reset para listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset para hyperlinks */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Restaurar estilos para elementos inline que são removidos por estilos de blocos em outros navegadores */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* Reset para citações */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Reset para tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Estilos para campos de formulário */
+input, textarea, select {
+  vertical-align: middle;
+}
